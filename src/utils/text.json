@@ -2,5 +2,12 @@
   "header" : {
     "title" : "Un'associazione per il gioco di ruolo e il gioco da tavolo",
     "subtitle" : "Scopri tutti le nostre iniziative e vieni a troviarci ad uno dei nostri eventi!"
+  },
+  "first_section":{
+    "box_1": "Dal <span class='font-bold'>2022</span> portiamo eventi di <span class='font-bold'>gioco di ruolo</span> e <span class='font-bold'>gioco da tavolo</span> in <span class='font-bold'>Brianza</span> e ovunque ci viene proposta l'occasione.",
+    "box_2": "Siamo un'associazione dedicata alla promozione del gioco in tutte le sue forme. Crediamo che i giochi di ruolo e da tavolo siano molto più di semplici passatempi: sono un modo per socializzare, sviluppare abilità strategiche e, soprattutto, <span class='font-bold'>divertirsi</span>! Organizziamo eventi serali, giornate di gioco e partecipiamo a fiere e festival in giro per l’Italia",
+    "box_3": "<span class='font-bold'>Il nostro obiettivo?</span> Creare un ambiente accogliente e inclusivo dove ogni giocatore possa sentirsi a casa.",
+    "contact_button": "Contattaci",
+    "event_button": "Scopri gli eventi"
   }
 }

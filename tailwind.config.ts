@@ -7,6 +7,24 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors: {
+      transparent: "transparent",
+      current: "currentColor",
+      white: "#ffffff",
+      black: "#4b4b4b",
+      grey: "#d9d8e2",
+      blackgradient: "rgba(0, 0, 0, 0.7)",
+      blue: { 
+        50 : "#38658e",
+        60 : "#23547c",
+        70 : "#133b5b",
+      },
+      red : {
+        50 : "#88313a",
+        60 : "#983f41",
+      },
+      yellow: "#e8bd60",
+    },
     extend: {
       fontFamily: {
         inter: ['var(--font-inter)'],
@@ -15,25 +33,6 @@ const config: Config = {
       },
     }
   },
-    // theme: {
-  //   colors: {
-  //     transparent: "transparent",
-  //     current: "currentColor",
-  //     white: "#ffffff",
-  //     black: "#2d2d2d",
-  //     blackgradient: "rgba(0, 0, 0, 0.7)",
-  //     grey: {
-  //       5 : "#f8f8f8",
-  //       10 : "#eeeeee",
-  //       20 : "#b6b6b6",
-  //       30 : "#848484",
-  //     },
-  //     red : {
-  //       10 : "#f85d33",
-  //       20 : "#9B153D",
-  //       30 : "#881436",
-  //     }
-  //   },
   plugins: [],
 };
 export default config;

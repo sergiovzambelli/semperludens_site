@@ -1,6 +1,7 @@
 import Image from "next/image"
 import text from "@/utils/text.json"
 import Text from "@/components/Text";
+import Button from "@/components/Button";
 
 export default function Home() {
   return (
@@ -41,8 +42,17 @@ export default function Home() {
       </div>
 
       {/* FIRST SECTION */}
-      <div>
-        
+      <div className="flex flex-col px-8 py-32 gap-16">
+        <div className="flex flex-col gap-4 items-center justify-center">
+          <Text type="m" text={text.first_section.box_1}/>
+          <Text type="s" text={text.first_section.box_2}/>
+          <Text type="s" text={text.first_section.box_3}/>
+        </div>
+
+        <div className="flex flex-col gap-4 items-center justify-center">
+          <Button text={text.first_section.contact_button} icon="full_arrow"/>
+          <Button text={text.first_section.event_button} icon="calendar"/>
+        </div>
       </div>
 
       {/* IMAGES */}

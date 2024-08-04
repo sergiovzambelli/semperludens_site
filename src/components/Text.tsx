@@ -17,6 +17,6 @@ const format: { [key: string]: string } = {
 export default function Text( {text, type} : TextProps ) {
 
   return (
-    <p className={`${format[type]} text-center`}> {text} </p>
+      <p className={`${format[type]} text-center`} dangerouslySetInnerHTML={{ __html: text }}></p>
   )
 }
