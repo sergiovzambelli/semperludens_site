@@ -9,5 +9,15 @@
     "box_3": "<span class='font-bold'>Il nostro obiettivo?</span> Creare un ambiente accogliente e inclusivo dove ogni giocatore possa sentirsi a casa.",
     "contact_button": "Contattaci",
     "event_button": "Scopri gli eventi"
+  },
+  "second_section":{
+    "title": "Dove trovarci?",
+    "box_1": "Non ci fermiamo mai! La nostra passione per il gioco ci porta in giro per la <span class='font-bold'>Brianza</span> e non solo.",
+    "box_2": "Organizziamo i nostri eventi principalmente in questa splendida regione, ma amiamo esplorare <span class='font-bold'>nuovi luoghi</span> e incontrare nuovi appassionati.",
+    "subtitle": "I nostri eventi fissi mensili:",
+    "event_1": "Macherio", 
+    "event_2": "Cesano Maderno",
+    "contact_title": "Rimani aggiornato sui nostri eventi",
+    "contact_text": "Segui i nostri <span class='font-bold'>social</span> o entra nel nostro <span class='font-bold'>Discord</span> per rimanere aggioranto sui prossimi eventi che abbiamo in serbo per te! "
   }
 }

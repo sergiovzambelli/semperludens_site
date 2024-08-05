@@ -1,6 +1,7 @@
 interface TextProps {
   text: string, 
-  type: string
+  type: string, 
+  className?: string
 }
 
 const format: { [key: string]: string } = {
@@ -14,9 +15,9 @@ const format: { [key: string]: string } = {
   "xxxxl" : "font-gelica font-bold text-7xl",
 }
 
-export default function Text( {text, type} : TextProps ) {
+export default function Text( {text, type, className = ""} : TextProps ) {
 
   return (
-      <p className={`${format[type]} text-center`} dangerouslySetInnerHTML={{ __html: text }}></p>
+      <p className={`${format[type]} ${className}`} dangerouslySetInnerHTML={{ __html: text }}></p>
   )
 }
