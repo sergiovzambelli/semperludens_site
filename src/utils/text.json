@@ -19,5 +19,29 @@
     "event_2": "Cesano Maderno",
     "contact_title": "Rimani aggiornato sui nostri eventi",
     "contact_text": "Segui i nostri <span class='font-bold'>social</span> o entra nel nostro <span class='font-bold'>Discord</span> per rimanere aggioranto sui prossimi eventi che abbiamo in serbo per te! "
+  }, 
+  "collab": {
+    "title": "Abbiamo collaborato con"
+  },
+  "form": {
+    "title": "Vuoi collaborare con noi o vuoi contattarci?",
+    "subtitle": "Dal 2022 portiamo eventi di gioco di ruolo e gioco da tavolo in Brianza e ovunque ci viene proposta l'occasione.",
+    "name": "Nome",
+    "name_placeholder": "Inserisci il tuo nome",
+    "surname": "Cognome",
+    "surname_placeholder": "Inserisci il tuo cognome",
+    "object": "Oggetto",
+    "object_placeholder": "Per cosa ci contatti?",
+    "body": "Messaggio",
+    "body_placeholder": "Cosa vuoi scriverci?",
+    "checkbox": "Acconsento al trattamento dei dati personali"
+  }, 
+  "footer": {
+    "text": "Associazione No-Profit di promozione sociale sul gioco di ruolo e il gioco da tavolo",
+    "contact": "Contatti:",
+    "email": "info.semperludens@gmail.com",
+    "number": "3341851016",
+    "rights": "© 2022 Semper Ludens - Tutti i diritti riservati. Semperludens.it",
+    "privacy": "Privacy Policy"
   }
 }

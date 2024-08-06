@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import "./globals.css";
 import { Inter, Nunito } from 'next/font/google';
 import localFont from 'next/font/local'
@@ -31,7 +32,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${nunito.variable} ${gelica.variable}`}>{children}</body>
+      <body className={`${inter.variable} ${nunito.variable} ${gelica.variable}`}>
+        {children}
+        <Footer/>
+      </body>
     </html>
   );
 }
