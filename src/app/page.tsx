@@ -99,6 +99,15 @@ export default function Home() {
           <EventCard event_url="/event_carousel/game_on_event.svg" text={text.second_section.event_1}/>
           <EventCard event_url="/event_carousel/role_play_event.svg" text={text.second_section.event_2}/>
         </div>
+
+        <Image 
+          className="mt-10 rounded-lg"
+          src="/SL_team.jpg"
+          alt="Semper Ludens team"
+          width={500}
+          height={500}
+          style={{ height: 'auto', width: 'auto' }}
+        />
       </div>
 
       <div className="bg-red-60 relative z-10">
