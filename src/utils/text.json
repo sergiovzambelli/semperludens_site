@@ -1,12 +1,12 @@
 {
   "header" : {
-    "title" : "Un'associazione per il gioco di ruolo e il gioco da tavolo",
+    "title" : "Gioco di ruolo e il gioco da tavolo in Associazione",
     "subtitle" : "Scopri tutti le nostre iniziative e vieni a troviarci ad uno dei nostri eventi!"
   },
   "first_section":{
-    "box_1": "Dal <span class='font-bold'>2022</span> portiamo eventi di <span class='font-bold'>gioco di ruolo</span> e <span class='font-bold'>gioco da tavolo</span> in <span class='font-bold'>Brianza</span> e ovunque ci viene proposta l'occasione.",
-    "box_2": "Siamo un'associazione dedicata alla promozione del gioco in tutte le sue forme. Crediamo che i giochi di ruolo e da tavolo siano molto più di semplici passatempi: sono un modo per socializzare, sviluppare abilità strategiche e, soprattutto, <span class='font-bold'>divertirsi</span>! Organizziamo eventi serali, giornate di gioco e partecipiamo a fiere e festival in giro per l’Italia",
-    "box_3": "<span class='font-bold'>Il nostro obiettivo?</span> Creare un ambiente accogliente e inclusivo dove ogni giocatore possa sentirsi a casa.",
+    "box_1": "Dal <span class='font-bold'>2022</span> portiamo eventi di <span class='font-bold'>gioco di ruolo</span> e <span class='font-bold'>gioco da tavolo</span> in <span class='font-bold'>Brianza</span> e ovunque ci venga proposta l'occasione.",
+    "box_2": "Siamo un'associazione dedicata alla promozione del gioco in tutte le sue forme. Crediamo che i giochi di ruolo e da tavolo siano molto più di semplici passatempi: sono un modo per socializzare, sviluppare abilità nell'interagire e, soprattutto, <span class='font-bold'>divertirsi</span>!<br>Organizziamo eventi serali, giornate di gioco e partecipiamo a fiere e festival in giro per l’Italia",
+    "box_3": "<span class='font-bold'>Il nostro obiettivo?</span><br> Creare un ambiente accogliente e inclusivo dove ogni giocatore possa sentirsi a casa.",
     "contact_button": "Contattaci",
     "event_button": "Scopri gli eventi"
   },
@@ -18,30 +18,31 @@
     "event_1": "Macherio", 
     "event_2": "Cesano Maderno",
     "contact_title": "Rimani aggiornato sui nostri eventi",
-    "contact_text": "Segui i nostri <span class='font-bold'>social</span> o entra nel nostro <span class='font-bold'>Discord</span> per rimanere aggioranto sui prossimi eventi che abbiamo in serbo per te! "
+    "contact_text": "Segui i nostri <span class='font-bold'>social</span> o entra nel nostro <span class='font-bold'>Discord</span> per rimanere aggiornato sui prossimi eventi che abbiamo in serbo per te! "
   }, 
   "collab": {
     "title": "Abbiamo collaborato con"
   },
   "form": {
     "title": "Vuoi collaborare con noi o vuoi contattarci?",
-    "subtitle": "Dal 2022 portiamo eventi di gioco di ruolo e gioco da tavolo in Brianza e ovunque ci viene proposta l'occasione.",
+    "subtitle": "Dal 2022 portiamo eventi di gioco di ruolo e gioco da tavolo in Brianza e ovunque ci venga proposta l'occasione.<br> Non esitare a contattarci!",
     "name": "Nome",
     "name_placeholder": "Inserisci il tuo nome",
-    "surname": "Cognome",
-    "surname_placeholder": "Inserisci il tuo cognome",
+    "email": "Email",
+    "email_placeholder": "Inserisci la tua email",
     "object": "Oggetto",
     "object_placeholder": "Per cosa ci contatti?",
     "body": "Messaggio",
     "body_placeholder": "Cosa vuoi scriverci?",
-    "checkbox": "Acconsento al trattamento dei dati personali"
+    "checkbox": "Acconsento al trattamento dei dati personali",
+    "submit": "Invia"
   }, 
   "footer": {
-    "text": "Associazione No-Profit di promozione sociale sul gioco di ruolo e il gioco da tavolo",
+    "text": "Associazione No-Profit di promozione sociale sul gioco di ruolo e il gioco da tavolo.",
     "contact": "Contatti:",
     "email": "info.semperludens@gmail.com",
     "number": "3341851016",
-    "rights": "© 2022 Semper Ludens - Tutti i diritti riservati. Semperludens.it",
+    "rights": "© 2022 Semper Ludens - Tutti i diritti riservati. semperludens.it",
     "privacy": "Privacy Policy"
   }
 }

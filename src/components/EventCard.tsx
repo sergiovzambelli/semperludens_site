@@ -3,12 +3,13 @@ import Text from "./Text";
 
 interface EventCardProps {
   event_url: string,
-  text: string
+  text: string,
+  classname?: string
 }
 
-export default function EventCard({ event_url, text } : EventCardProps) {
+export default function EventCard({ event_url, text, classname } : EventCardProps) {
   return (
-    <div className="flex flex-col gap-2">
+    <div className={`flex flex-col gap-2 rounded-lg ${classname}`}>
       <div className="flex justify-center items-center bg-red-60 min-h-40 p-8">
         <Image
           src={event_url}
@@ -18,7 +19,7 @@ export default function EventCard({ event_url, text } : EventCardProps) {
           style={{ height: 'auto', width: 'auto' }}
         />
       </div>
-      <Text type="xs" text={text}/>
+      <Text type="s" text={text}/>
     </div>
   );
 }

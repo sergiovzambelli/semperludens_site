@@ -8,14 +8,14 @@ export default async function CollabGrid() {
   const imageFilenames = await fs.readdir(imageDirectory);
 
   return (
-    <div className='grid grid-cols-2 gap-4 py-8'>
+    <div className='grid grid-cols-2 gap-4 py-8 lg:flex lg:flex-row'>
       {imageFilenames.map((filename) => (
         <div key={filename} className='flex justify-center items-center'>
           <Image
             src={`/collab_carousel/${filename}`}
             alt={`Collaboration with ${filename}`}
-            width={150}
-            height={150}
+            width={300}
+            height={300}
             style={{ height: 'auto', width: 'auto' }}
           />
       </div>

@@ -13,7 +13,7 @@ const inter = Inter({
   subsets: ['latin'],
 });
 
-const nunito = Inter({
+const nunito = Nunito({
   variable: '--font-nunito',
   subsets: ['latin'],
 });
