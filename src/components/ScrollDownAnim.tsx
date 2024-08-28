@@ -11,7 +11,7 @@ export default function ScrollDownAnim() {
         transition={{
           y : {
             duration: 0.4,
-            repeatDelay: 0.2,
+            repeatDelay: 0.8,
             repeat: Infinity,
             repeatType: "reverse",
             ease: "easeInOut",
