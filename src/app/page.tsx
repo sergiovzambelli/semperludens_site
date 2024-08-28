@@ -7,6 +7,7 @@ import CollabGrid from "@/components/CollabGrid";
 import Form from "@/components/Form/Form";
 import LogoSL from "@/components/LogoSL";
 import Icon from "@/components/Icon";
+import ScrollDownAnim from "@/components/ScrollDownAnim";
 
 export default function Home() {
   return (
@@ -30,13 +31,15 @@ export default function Home() {
             </div>
           </div>
 
-          <Image
+          {/* <Image
               alt="Scroll down button"
               src="/scrolling_header.svg"
               width={40}
               height={70}
               style={{ height: 'auto', width: 'auto' }}
-            />
+            /> */}
+          
+          <ScrollDownAnim/>
         </div>
       </div>
 
