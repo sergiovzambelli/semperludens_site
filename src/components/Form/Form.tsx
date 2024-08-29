@@ -16,6 +16,8 @@ interface FormProps {
 }
 
 export default function Form({ classname }: FormProps) {
+  const home_page = text.home_page;
+
   const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>({
     resolver: zodResolver(UserSchema),
   });
@@ -41,16 +43,16 @@ export default function Form({ classname }: FormProps) {
     >
       <div className="flex flex-col gap-4 lg:flex-row">
         <Input
-          placeholder={text.form.name_placeholder}
-          label={text.form.name}
+          placeholder={home_page.form.name_placeholder}
+          label={home_page.form.name}
           required
           register={register}
           name={"name"}
           error={errors.name}
         />
         <Input
-          placeholder={text.form.email_placeholder}
-          label={text.form.email}
+          placeholder={home_page.form.email_placeholder}
+          label={home_page.form.email}
           required
           register={register}
           name={"email"}
@@ -58,16 +60,16 @@ export default function Form({ classname }: FormProps) {
         />
       </div>
       <Input
-        placeholder={text.form.object_placeholder}
-        label={text.form.object}
+        placeholder={home_page.form.object_placeholder}
+        label={home_page.form.object}
         required
         register={register}
         name={"object"}
         error={errors.object}
       />
       <Textarea
-        placeholder={text.form.body_placeholder}
-        label={text.form.body}
+        placeholder={home_page.form.body_placeholder}
+        label={home_page.form.body}
         required
         rows={8}
         register={register}
@@ -75,13 +77,13 @@ export default function Form({ classname }: FormProps) {
         error={errors.body}
       />
       <Checkbox
-        text={text.form.checkbox}
+        text={home_page.form.checkbox}
         register={register}
         name={"checkbox"}
         error={errors.checkbox}
       />
       <div className="mt-8 flex lg:justify-center w-full">
-        <Button text={text.form.submit} icon="empty_arrow" />
+        <Button text={home_page.form.submit} icon="empty_arrow" />
       </div>
       { message && 
         <div className="mt-6 rounded-xl bg-blue-70 px-8 py-4 text-white flex mx-auto max-w-[fit-content]">

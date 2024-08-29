@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "name": "Evento 1",
+    "active": false,
+    "description": "bello bello",
+    "place": "Macherio",
+    "date": "28 Giugno 2024" 
+  }
+]

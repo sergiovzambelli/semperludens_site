@@ -1,5 +1,7 @@
 import { z, ZodType } from "zod";
 
+///  FORM
+
 export type FormData = {
   name: string
   email: string
@@ -25,3 +27,13 @@ export const UserSchema: ZodType<FormData> = z
     }
     ),
   });
+
+
+  /// EVENTS
+  export interface EventBoxProps {
+    id: number;
+    title: string;
+    date: string;
+    location: string;
+    active: boolean;    
+  } 
