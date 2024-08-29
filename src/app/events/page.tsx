@@ -9,6 +9,9 @@ import { EventBoxProps } from "@/utils/types";
 export default function EventsPage() {
   const events_page = text.events;
   const active_events = fetchActiveEvents();
+
+  console.log(active_events);
+
   return (
     <main className="h-full bg-blue-50 flex flex-col items-center py-16 px-10 gap-16">
       <LogoSL height={400} width={400} />
@@ -24,10 +27,9 @@ export default function EventsPage() {
         {
           active_events.length > 0
           ?
-          "Non va"
-          // active_events.map(({ event }: { event: EventBoxProps }) => (
-          //   <BoxEvent key={event.id} event={event} />
-          // ))
+          active_events.map((event : EventBoxProps) => (
+            <BoxEvent key={event.id} event={event} />
+          ))
           :
           <NoEvents />
         }

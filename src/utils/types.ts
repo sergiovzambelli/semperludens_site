@@ -31,9 +31,10 @@ export const UserSchema: ZodType<FormData> = z
 
   /// EVENTS
   export interface EventBoxProps {
-    id: number;
-    title: string;
-    date: string;
-    location: string;
-    active: boolean;    
+    id: string;
+    name: string;
+    active: boolean; 
+    description: string;
+    place: string;  
+    date: string; 
   } 

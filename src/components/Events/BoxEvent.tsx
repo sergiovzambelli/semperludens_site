@@ -1,10 +1,28 @@
 import { EventBoxProps } from "@/utils/types"
 import Text from "@/components/Text"
+import Image from "next/image"
+import Button from "../Button"
 
 export default function BoxEvent({event} : {event: EventBoxProps}) {
   return (
-    <div className="bg-white p-8 rounded-xl">
-      <Text text={event.title} type="l" className="text-yellow"/>
+    <div className="bg-white p-8 rounded-xl flex flex-col gap-6 items-center justify-center">
+      <div className="bg-grey w-full h-[150px]"></div>
+      <Text text={event.name} type="xl" className="text-yellow"/>
+      <div className="border-4 border-yellow px-6 py-2 rounded-2xl text-blue-50 flex flex-row gap-2">
+        {/* <Image
+          alt="Place icon"
+          src={}
+          height={24}
+          width={24}
+          style = {{ minHeight:"24", minWidth:"24"}}
+        /> */}
+        <Text text={event.place} type="xs" className="!font-medium"/>
+      </div>
+      <div className="text-blue-50 flex flex-col items-center justify-center">
+        <Text text={event.date} type="m" className="!font-medium"/>
+        <Text text="Iscrizioni aperte" type="m" className="!font-extrabold"/>
+      </div>
+      <Button text="Scopri di più" icon="full_arrow" url={`/events/${event.id}`}/>
     </div>
   )
 }

@@ -1,10 +1,10 @@
 [
   {
-    "id": 1,
+    "id": "aboansd",
     "name": "Evento 1",
-    "active": false,
-    "description": "bello bello",
-    "place": "Macherio",
+    "active": true,
+    "description": "Il miglior evento di tutta la brianza",
+    "place": "Biblioteca di Macherio",
     "date": "28 Giugno 2024" 
   }
 ]
