@@ -27,14 +27,3 @@ export const UserSchema: ZodType<FormData> = z
     }
     ),
   });
-
-
-  /// EVENTS
-  export interface EventBoxProps {
-    id: string;
-    name: string;
-    active: boolean; 
-    description: string;
-    place: string;  
-    date: string; 
-  } 

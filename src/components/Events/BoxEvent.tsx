@@ -1,9 +1,9 @@
-import { EventBoxProps } from "@/utils/types"
+import { Event } from "@/utils/interfaces"
 import Text from "@/components/Text"
 import Image from "next/image"
 import Button from "../Button"
 
-export default function BoxEvent({event} : {event: EventBoxProps}) {
+export default function BoxEvent({event} : {event: Event}) {
   return (
     <div className="bg-white p-8 rounded-xl flex flex-col gap-6 items-center justify-center">
       <div className="bg-grey w-full h-[150px]"></div>

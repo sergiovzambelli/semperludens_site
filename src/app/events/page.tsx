@@ -4,13 +4,11 @@ import LogoSL from "@/components/LogoSL";
 import Text from "@/components/Text";
 import { fetchActiveEvents } from "@/utils/fetch";
 import text from "@/utils/text.json";
-import { EventBoxProps } from "@/utils/types";
+import { Event } from "@/utils/interfaces";
 
 export default function EventsPage() {
   const events_page = text.events;
   const active_events = fetchActiveEvents();
-
-  console.log(active_events);
 
   return (
     <main className="h-full bg-blue-50 flex flex-col items-center py-16 px-10 gap-16">
@@ -27,7 +25,7 @@ export default function EventsPage() {
         {
           active_events.length > 0
           ?
-          active_events.map((event : EventBoxProps) => (
+          active_events.map((event : Event) => (
             <BoxEvent key={event.id} event={event} />
           ))
           :
