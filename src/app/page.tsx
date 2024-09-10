@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main>
       {/* HEADER */}
-      <div className="h-dvh min-h-[700px] relative flex justify-center items-center">
+      <div className="h-dvh min-h-[700px] relative flex justify-center items-center overflow-hidden">
         <div className="absolute inset-0 -z-10">
           <Image
             alt="Semper Ludens background"
@@ -99,7 +99,7 @@ export default function Home() {
         </div>
 
         <Image 
-          className="mt-10 xl:mt-0 rounded-lg lg:mx-auto"
+          className="mt-10 xl:mt-0 rounded-lg lg:mx-auto xl:max-w-[800px]"
           src="/SL_team.jpg"
           alt="Semper Ludens team"
           width={500}
