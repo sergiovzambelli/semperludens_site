@@ -4,7 +4,7 @@ import Button from '@/components/Button'
  
 export default function NotFound() {
   return (
-    <div className='h-dvh bg-blue-50 px-6 flex flex-col items-center justify-center gap-10'>
+    <div className='h-dvh bg-blue-50 flex flex-col items-center justify-center gap-10 px-6'>
       <LogoSL height={500} width={500} />
       <div className='flex flex-col gap-6'>
         <Text 
