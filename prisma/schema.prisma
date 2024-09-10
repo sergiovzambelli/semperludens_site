@@ -1,0 +1,68 @@
+//Ctrl shift i per formattare
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL")
+  directUrl = env("POSTGRES_URL_NON_POOLING")
+}
+
+model Event {
+  id          String   @id @default(uuid())
+  title       String   @db.VarChar(255)
+  subtitle    String   @db.VarChar(255)
+  description String   @db.VarChar(255)
+  start_date  String   @db.VarChar(255)
+  start_time  String   @db.VarChar(255)
+  location    String   @db.VarChar(255)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  isActive    Boolean
+  isPublished Boolean
+  link_maps   String   @db.VarChar(255)
+  link_image  String   @db.VarChar(255)
+  games       Game[]
+
+  @@map("events")
+}
+
+model Game {z
+  id           String   @id @default(uuid())
+  title        String   @db.VarChar(255)
+  description  String   @db.VarChar(255)
+  master_name  String   @db.VarChar(255)
+  game         String   @db.VarChar(255)
+  player_max   Int
+  players      Player[]
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  event      Event    @relation(fields: [id], references: [id], onDelete: Cascade)
+
+
+  @@map("games")
+}
+
+model Player {
+  id        String   @id @default(uuid())
+  name      String   @db.VarChar(255)
+  surname  String   @db.VarChar(255)
+  email     String   @db.VarChar(255) @unique
+  phone  String   @db.VarChar(255)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("players")
+  Game Game[]
+}
+
+model Admin {
+  email     String   @id @db.VarChar(255)
+  password  String   @db.VarChar(255)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("admins")
+}

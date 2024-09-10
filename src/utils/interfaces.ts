@@ -10,8 +10,7 @@ export interface Event {
   start_time: string; 
   location: string;
 
-  game_id: string[];
-  event_id: string;
+  games: Game[];
 
   isActive: boolean;  
   isPublished: boolean;
@@ -29,10 +28,9 @@ export interface Game {
   game: string;
 
   player_max: number;
-  player_total: number;
-  player_ids: string[];
+  players: Player[];
 
-  event_id: string;
+  event: Event;
 }
 
 export interface Player {
@@ -42,8 +40,13 @@ export interface Player {
   surname: string;
   email: string;
   phone: string;
+}
 
-  subscription_id: string;
+export interface Admin {
+  id: string;
+
+  email: string;
+  password: string;
 }
 
 
