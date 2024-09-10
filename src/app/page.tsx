@@ -29,16 +29,7 @@ export default function Home() {
               <Text type="xl" text={text.header.title} className="text-center"/>
               <Text type="s" text={text.header.subtitle} className="text-center"/>
             </div>
-          </div>
-
-          {/* <Image
-              alt="Scroll down button"
-              src="/scrolling_header.svg"
-              width={40}
-              height={70}
-              style={{ height: 'auto', width: 'auto' }}
-            /> */}
-          
+          </div>          
           <ScrollDownAnim/>
         </div>
       </div>
