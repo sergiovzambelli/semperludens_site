@@ -1,8 +1,6 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import prisma from '@/utils/db-client';
 
-export const dynamic = 'force-static'
-
 export async function GET(request: NextRequest) {
   try {
     const events = await prisma.event.findMany()
@@ -14,21 +12,22 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
+    const body = await request.json();
+    
     const event = await prisma.event.create({
       data : {
-        title: 'Evento di prova',
-        subtitle: 'Evento di prova',
-        description: 'Evento di prova',
-        start_date: '2022-01-01',
-        start_time: '00:00:00',
-        location: 'Online',
-        isActive: true,
-        isPublished: true,
-        link_maps: 'https://maps.google.com',
-        link_image: 'https://image.com',
+        title: body.title,
+        subtitle: body.subtitle,
+        description: body.description,
+        start_date: body.start_date,
+        start_time: body.start_time,
+        location: body.location,
+        isActive: body.isActive,
+        isPublished: body.isPublished,
+        link_maps: body.link_maps,
+        link_image: body.link_image,
       },
     })
-
     return NextResponse.json(event, { status: 201 });
 
   } catch (error) {
