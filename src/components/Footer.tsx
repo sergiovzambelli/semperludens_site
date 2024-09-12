@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="bg-blue-60">
         <div className="flex flex-col px-8 py-16 gap-10 lg:flex-row lg:items-end lg:justify-around">
           <div className="flex flex-col gap-8 lg:w-1/4">
-            <LogoSL height={50} width={50}/>
+            <LogoSL height={120} width={120}/>
             <Text text={text.footer.text} type="s" className="text-white"/>  
           </div>
           <div className="flex flex-col gap-4 w-full lg:w-1/4">

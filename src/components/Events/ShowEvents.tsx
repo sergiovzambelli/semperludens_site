@@ -5,7 +5,7 @@ import BoxEvent from "./BoxEvent";
 import NoEvents from "./NoEvents";
 import Text from "@/components/Text";
 import text from "@/utils/text.json";
-import { fetchEvents } from "@/utils/fetch";
+import { getEvents } from "@/utils/fetch";
 import { Event } from "@/utils/interfaces";
 import Loading from "../Loading";
 
@@ -17,7 +17,7 @@ export default function ShowEvents() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const fetchedEvents = await fetchEvents();
+        const fetchedEvents = await getEvents();
         setEvents(fetchedEvents);
       } catch (error) {
         console.error("Error fetching events:", error);
@@ -27,7 +27,6 @@ export default function ShowEvents() {
     };
 
     fetchData();
-    console.log(events);
   }, []);
   
   return (

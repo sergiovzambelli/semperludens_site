@@ -32,7 +32,7 @@ export default function Button({ text, icon, onClick, url }: ButtonProps) {
           src={icons[icon]}
           width={18}
           height={18}
-          style={{ height: 'auto', width: 'auto' }}
+          style={{ height: 'auto', width: 'auto', minWidth: '18px', minHeight: '18px' }}
         />
       )}
       <Text type="s" text={text} />

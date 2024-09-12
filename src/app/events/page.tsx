@@ -2,7 +2,6 @@ import LogoSL from "@/components/LogoSL";
 import Text from "@/components/Text";
 import text from "@/utils/text.json";
 import ShowEvents from "@/components/Events/ShowEvents";
-import Loading from "@/components/Loading";
 
 export default function EventsPage() {
   const events_page = text.events;

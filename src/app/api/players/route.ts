@@ -36,7 +36,7 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
 
-    const player = prisma.player.create({
+    const player = await prisma.player.create({
       data: {
         name: body.name,
         surname: body.surname,

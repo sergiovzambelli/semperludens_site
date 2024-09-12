@@ -13,7 +13,7 @@ export default function LogoSL({height, width}: LogoSLProps) {
       src="/logo_SL.svg"
       width={height}
       height={width}
-      style={{ height: 'auto', width: 'auto' }}
+      style={{ height: 'auto', width: 'auto', maxHeight: `${height}px`, maxWidth: `${width}px` }}
     />
   )
 }
