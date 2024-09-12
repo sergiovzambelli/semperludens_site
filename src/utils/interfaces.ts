@@ -28,9 +28,10 @@ export interface Game {
   game: string;
 
   player_max: number;
-  players: Player[];
+  reservations: Reservation[];
 
   event: Event;
+  eventId: string;
 }
 
 export interface Player {
@@ -40,6 +41,8 @@ export interface Player {
   surname: string;
   email: string;
   phone: string;
+
+  reservations: Reservation[];
 }
 
 export interface Admin {
@@ -47,6 +50,16 @@ export interface Admin {
 
   email: string;
   password: string;
+}
+
+export interface Reservation {
+  id: string;
+
+  player: Player;
+  playerId: string;
+
+  game: Game;
+  gameId: string;
 }
 
 

@@ -16,15 +16,21 @@ export async function PATCH(
       );
     }
 
-    const updated_player = await prisma.player.update({
-      where: { id: player_id },
+    const reservation = await prisma.reservation.create({
       data: {
-        Game: {
-          connect: { id: game_id },
-        },
+        gameId: game_id,
+        playerId: player_id,
       },
+    });
+
+    const updated_player = await prisma.player.findUnique({
+      where: { id: player_id },
       include: {
-        Game: true,
+        reservations: {
+          include: {
+            game: true,
+          },
+        },
       },
     });
 

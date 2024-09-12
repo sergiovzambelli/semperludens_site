@@ -11,7 +11,7 @@ datasource db {
 }
 
 model Event {
-  id          String   @id @default(uuid())
+  id          String   @id @default(cuid())
   title       String   @db.VarChar(255)
   subtitle    String   @db.VarChar(255)
   description String   @db.VarChar(255)
@@ -30,29 +30,31 @@ model Event {
 }
 
 model Game {
-  id          String   @id @default(uuid())
-  title       String   @db.VarChar(255)
-  description String   @db.VarChar(255)
-  master_name String   @db.VarChar(255)
-  game        String   @db.VarChar(255)
-  player_max  Int
-  players     Player[]
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  event       Event    @relation(fields: [id], references: [id], onDelete: Cascade)
+  id           String        @id @default(cuid())
+  title        String        @db.VarChar(255)
+  description  String        @db.VarChar(255)
+  master_name  String        @db.VarChar(255)
+  game         String        @db.VarChar(255)
+  player_max   Int
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  event        Event         @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  eventId      String
+  reservations Reservation[]
 
   @@map("games")
 }
 
 model Player {
-  id        String   @id @default(uuid())
+  id        String   @id @default(cuid())
   name      String   @db.VarChar(255)
   surname   String   @db.VarChar(255)
   email     String   @unique @db.VarChar(255)
   phone     String   @db.VarChar(255)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  Game      Game[]
+
+  reservations Reservation[]
 
   @@map("players")
 }
@@ -64,4 +66,12 @@ model Admin {
   updatedAt DateTime @updatedAt
 
   @@map("admins")
+}
+
+model Reservation {
+  id     String @id @default(cuid())
+  user   Player @relation(fields: [playerId], references: [id])
+  playerId String
+  game   Game   @relation(fields: [gameId], references: [id])
+  gameId String
 }

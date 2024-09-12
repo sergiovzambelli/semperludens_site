@@ -30,6 +30,7 @@ export async function POST(request: NextRequest) {
         master_name: body.master_name,
         game: body.game,
         player_max: body.player_max,
+        eventId: body.eventId,
       },
     })
     return NextResponse.json(game, { status: 201 });

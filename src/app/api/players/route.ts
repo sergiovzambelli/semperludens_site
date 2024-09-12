@@ -14,9 +14,9 @@ export async function GET(request: NextRequest) {
 
     const players = prisma.player.findMany({
       where: {
-        Game: {
+        reservations: {
           some: {
-            id: game_id,
+            gameId: game_id,
           },
         },
       },
