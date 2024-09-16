@@ -4,6 +4,7 @@ import { Inter, Nunito } from 'next/font/google';
 import localFont from 'next/font/local'
 import { Metadata } from "next";
 import seo_text from "@/utils/seo.json"
+import StoreProvider from "./StoreProvider";
 
 export const metadata: Metadata = {
   title: seo_text.title,
@@ -54,10 +55,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${nunito.variable} ${gelica.variable}`}>
-        {children}
-        <Footer/>
-      </body>
+      <StoreProvider>
+        <body className={`${inter.variable} ${nunito.variable} ${gelica.variable}`}>
+          {children}
+          <Footer/>
+        </body>
+      </StoreProvider>
     </html>
   );
 }
