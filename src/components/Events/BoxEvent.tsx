@@ -10,7 +10,7 @@ export default function BoxEvent({event} : {event: Event}) {
       <Suspense fallback={<div>Loading...</div>}>
         <div className="bg-white p-8 rounded-xl flex flex-col gap-6 items-center justify-center">
           <div className="bg-grey w-full h-[150px]"></div>
-          <Text text={event.title} type="xl" className="text-yellow"/>
+          <Text text={event.title} type="xl" className="text-yellow text-center"/>
           <div className="border-4 border-yellow px-6 py-2 rounded-2xl text-blue-50 flex flex-row gap-2">
             {/* <Image
               alt="Place icon"

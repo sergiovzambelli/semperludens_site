@@ -58,5 +58,9 @@
     "where": "Dove: ",
     "time": "A che ora: ",
     "min_age": "Età minima: 16 anni"
+  },
+  "games" : {
+    "title" : "Ora di scegliere il gioco",
+    "subtitle": "Seleziona la partita a cui vuoi partecipare:"
   }
 }

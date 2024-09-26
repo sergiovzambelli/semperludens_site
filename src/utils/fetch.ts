@@ -44,15 +44,15 @@ export async function createEvent(event: Event) {
 //   return
 // }
 
-export async function getSingleGame(id: string) {
-  try {
-    const response = await fetch("/api/events/" + id);
-    return await response.json();
-  } catch (error) {
-    console.error("Error while calling the API", error);
-    return [];
-  }
-}
+// export async function getSingleGame(id: string) {
+//   try {
+//     const response = await fetch("/api/events/" + id);
+//     return await response.json();
+//   } catch (error) {
+//     console.error("Error while calling the API", error);
+//     return [];
+//   }
+// }
 
 export async function createGame(game: Game) {
   try {
@@ -67,6 +67,16 @@ export async function createGame(game: Game) {
   } catch (error) {
     console.error("Error while calling the API", error);
     return {};
+  }
+}
+
+export async function getGames(event_id : string) {
+  try {
+    const response = await fetch(`/api/games?event=${event_id}`);
+    return await response.json();
+  } catch (error) {
+    console.error("Error while calling the API", error);
+    return [];
   }
 }
 
