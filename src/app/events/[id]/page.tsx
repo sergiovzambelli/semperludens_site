@@ -5,7 +5,7 @@ import LogoSL from "@/components/LogoSL";
 export default function EventPage({ params }: { params: { id: string } }) {
 
   return(
-    <main className="bg-red-50 h-dvh flex flex-col justify-center items-center">
+    <main className="bg-red-50 py-32 min-h-dvh h-full flex flex-col justify-center items-center">
       <div className="px-12 flex flex-col justify-center items-center gap-12 max-w-[800px]">
         <LogoSL height={150} width={150} />
 

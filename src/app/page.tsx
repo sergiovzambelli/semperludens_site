@@ -8,6 +8,7 @@ import Form from "@/components/Form/Form";
 import LogoSL from "@/components/LogoSL";
 import Icon from "@/components/Icon";
 import ScrollDownAnim from "@/components/ScrollDownAnim";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const home_page = text.home_page;
@@ -144,6 +145,8 @@ export default function Home() {
         </div>
         <Form classname="max-w-[900px] lg:mx-auto"/>
       </div>
+
+      <Footer/>
 
     </main>
   );

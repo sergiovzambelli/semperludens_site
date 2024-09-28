@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer";
 import "./globals.css";
 import { Inter, Nunito } from 'next/font/google';
 import localFont from 'next/font/local'
@@ -58,7 +57,6 @@ export default function RootLayout({
       <StoreProvider>
         <body className={`${inter.variable} ${nunito.variable} ${gelica.variable}`}>
           {children}
-          <Footer/>
         </body>
       </StoreProvider>
     </html>

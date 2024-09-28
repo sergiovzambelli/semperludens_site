@@ -1,25 +1,33 @@
-import LogoSL from '@/components/LogoSL'
-import Text from '@/components/Text'
-import Button from '@/components/Button'
- 
+import LogoSL from "@/components/LogoSL";
+import Text from "@/components/Text";
+import Button from "@/components/Button";
+import Footer from "@/components/Footer";
+
 export default function NotFound() {
   return (
-    <div className='h-dvh bg-blue-50 flex flex-col items-center justify-center gap-10 px-6'>
-      <LogoSL height={500} width={500} />
-      <div className='flex flex-col gap-6'>
-        <Text 
-          text='Oh no, questa pagina non esiste' 
-          type='xl' 
-          className='text-white text-center'
-        />
-        <Text 
-          text='È normale che tu ti sia pers*, deve essere difficile orientarsi per un Avventurier* novizi* come te.<br>Non preoccuparti, il salone principale è qui di fianco!' 
-          type='s' 
-          className='text-white text-center'
+    <main>
+      <div className="h-dvh bg-blue-50 flex flex-col items-center justify-center gap-10 px-6">
+        <LogoSL height={500} width={500} />
+        <div className="flex flex-col gap-6">
+          <Text
+            text="Oh no, questa pagina non esiste"
+            type="xl"
+            className="text-white text-center"
+          />
+          <Text
+            text="È normale che tu ti sia pers*, deve essere difficile orientarsi per un Avventurier* novizi* come te.<br>Non preoccuparti, il salone principale è qui di fianco!"
+            type="s"
+            className="text-white text-center"
+          />
+        </div>
+
+        <Button
+          text={"Torna al salone principale"}
+          icon="empty_arrow"
+          url="/"
         />
       </div>
-
-      <Button text={'Torna al salone principale'} icon='empty_arrow' url='/'/>
-    </div>
-  )
+      <Footer />
+    </main>
+  );
 }

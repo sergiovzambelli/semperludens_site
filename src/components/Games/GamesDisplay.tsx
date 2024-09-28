@@ -42,7 +42,7 @@ export default function GamesDisplay({ event_id }: GamesDisplayProps) {
       {loading ? (
         <Loading />
       ) : (
-        games.map((game: Game, key: number) => <BoxGame game={game}/>)
+        games.map((game: Game, key: number) => <BoxGame game={game} key={key}/>)
       )}
     </section>
   );
