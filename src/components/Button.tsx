@@ -9,6 +9,7 @@ interface ButtonProps {
   icon?: "full_arrow" | "empty_arrow" | "calendar";
   onClick?: () => void;
   url?: string;
+  type?: "button" | "submit" | "reset";
 }
 
 const icons: { [key: string]: string } = {
@@ -23,7 +24,7 @@ const formats: { [key: string]: string } = {
   "calendar": "text-red-50 bg-transparent border-2 border-red-50 hover:bg-yellow hover:border-yellow focus:bg-yellow focus:border-yellow active:bg-red-60 active:border-red-60",
 };
 
-export default function Button({ text, icon, onClick, url }: ButtonProps) {
+export default function Button({ text, icon, onClick, url, type }: ButtonProps) {
   const buttonContent = (
     <>
       {icon && (
@@ -42,11 +43,11 @@ export default function Button({ text, icon, onClick, url }: ButtonProps) {
   const commonClasses = `flex flex-row items-center justify-center gap-2 px-6 py-2 max-w-[fit-content] rounded-full ${icon ? formats[icon] : 'bg-blue-300 text-sm'}`;
 
   return url ? (
-    <Link href={url} className={commonClasses}>
+    <Link href={url} className={commonClasses} onClick={onClick}>
       {buttonContent}
     </Link>
   ) : (
-    <button onClick={onClick} className={commonClasses}>
+    <button onClick={onClick} className={commonClasses} type={type}>
       {buttonContent}
     </button>
   );

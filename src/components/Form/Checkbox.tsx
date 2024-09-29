@@ -4,13 +4,14 @@ interface CheckboxProps {
   register?: any;
   name?: string;
   error?: any;
+  className? : string;
 }
 
-export default function Checkbox({ text, register, name, error }: CheckboxProps) {
+export default function Checkbox({ text, register, name, error, className }: CheckboxProps) {
   const checkboxId = `checkbox-${text}`;
 
   return (
-    <div className="flex flex-row gap-4 items-center justify-center">
+    <div className={`flex flex-row gap-4 items-center justify-center ${className}`}>
       <input
         type="checkbox"
         id={checkboxId}

@@ -3,6 +3,7 @@ import Text from "@/components/Text";
 import AvaibleChips from "./AvaibleChips";
 import Button from "../Button";
 import Image from "next/image";
+import SaveGame from "./SaveGame";
 
 interface ModalGameProps {
   game: Game;
@@ -60,7 +61,7 @@ export default function ModalGame({ game, setIsOpen }: ModalGameProps) {
             n={reservations}
           />
 
-          <Button text="Iscriviti" url="#" icon="full_arrow" />
+          <SaveGame game_id={game.id} />
         </div>
       </div>
     </section>

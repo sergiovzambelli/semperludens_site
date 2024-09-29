@@ -4,12 +4,14 @@ interface playerState {
   name: string;
   surname: string;
   email: string;
+  phone: string;
 }
 
 const initialState: playerState = {
-  name: "Giorgio",
-  surname: "",
-  email: "",
+  name: "DEFAULT",
+  surname: "DEFAULT",
+  email: "DEFAULT",
+  phone: "DEFAULT",
 };
 
 const playerSlice = createSlice({
@@ -25,9 +27,19 @@ const playerSlice = createSlice({
     setEmail: (state, action: PayloadAction<string>) => {
       state.email = action.payload;
     },
+    setPhone: (state, action: PayloadAction<string>) => {
+      state.phone = action.payload;
+    },
+    setPlayerData: (state, action: PayloadAction<playerState>) => {
+      state.name = action.payload.name;
+      state.surname = action.payload.surname;
+      state.email = action.payload.email;
+      state.phone = action.payload.phone;
+    },
   },
 });
 
-export const { setName, setSurname, setEmail } = playerSlice.actions;
+export const { setName, setSurname, setEmail, setPhone, setPlayerData } =
+  playerSlice.actions;
 
 export default playerSlice.reducer;

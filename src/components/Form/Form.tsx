@@ -18,7 +18,12 @@ interface FormProps {
 export default function Form({ classname }: FormProps) {
   const home_page = text.home_page;
 
-  const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>({
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<FormData>({
     resolver: zodResolver(UserSchema),
   });
 
@@ -28,7 +33,9 @@ export default function Form({ classname }: FormProps) {
     if (result.success) {
       setMessage(`Il messaggio è stato inviato correttamente!`);
     } else {
-      setMessage(`Non siamo riusciti a inviare il tuo messaggio, riprova più tardi.`);
+      setMessage(
+        `Non siamo riusciti a inviare il tuo messaggio, riprova più tardi.`
+      );
     }
 
     reset();
@@ -83,13 +90,13 @@ export default function Form({ classname }: FormProps) {
         error={errors.checkbox}
       />
       <div className="mt-8 flex lg:justify-center w-full">
-        <Button text={home_page.form.submit} icon="empty_arrow" />
+        <Button text={home_page.form.submit} icon="empty_arrow" type="submit"/>
       </div>
-      { message && 
+      {message && (
         <div className="mt-6 rounded-xl bg-blue-70 px-8 py-4 text-white flex mx-auto max-w-[fit-content]">
           {message}
         </div>
-      }
+      )}
     </form>
   );
 }

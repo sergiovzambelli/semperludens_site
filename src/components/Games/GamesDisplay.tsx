@@ -7,21 +7,25 @@ import { getGames } from "@/utils/fetch";
 import BoxGame from "./BoxGame";
 import text from "@/utils/text.json";
 import Text from "@/components/Text";
+import { RootState } from "@/lib/store";
+import { useSelector } from "react-redux";
 
-interface GamesDisplayProps {
-  event_id: string;
-}
-
-export default function GamesDisplay({ event_id }: GamesDisplayProps) {
+export default function GamesDisplay() {
   const [games, setGames] = useState<Game[]>([]);
   const [loading, setLoading] = useState(true);
   const games_page = text.games;
+  
+  const event_id = useSelector((state: RootState) => state.event.event_id); 
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const fetchedGames = await getGames(event_id);
-        setGames(fetchedGames);
+        if (event_id) {
+          const fetchedGames = await getGames(event_id);
+          setGames(fetchedGames);
+        } else {
+          console.warn("event_id is not available. Skipping fetch.");
+        }
       } catch (error) {
         console.error("Error fetching events:", error);
       } finally {
@@ -30,7 +34,7 @@ export default function GamesDisplay({ event_id }: GamesDisplayProps) {
     };
 
     fetchData();
-  }, []);
+  }, [event_id]);
 
   return (
     <section className="flex flex-col justify-center items-center gap-16 lg:gap-20">

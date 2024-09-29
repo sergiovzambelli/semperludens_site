@@ -10,6 +10,14 @@ export type FormData = {
   checkbox: boolean
 }
 
+export type PlayerFormData = {
+  name: string
+  surname: string
+  phone: string
+  email: string
+  checkbox: boolean
+}
+
 export const UserSchema: ZodType<FormData> = z
   .object({
     email: z.string().min(1, "Questo campo è obbligatorio").email("Inserisci un indirizzo email valido"),

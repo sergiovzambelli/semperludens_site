@@ -62,5 +62,23 @@
   "games" : {
     "title" : "Ora di scegliere il gioco",
     "subtitle": "Seleziona la partita a cui vuoi partecipare:"
+  },
+  "player_screen" : {
+    "title" : "Ci servono solo un paio di info per assicurarti il posto 🥰",
+    "form": {
+      "title": "Vuoi collaborare con noi o vuoi contattarci?",
+      "subtitle": "Dal 2022 portiamo eventi di gioco di ruolo e gioco da tavolo in Brianza e ovunque ci venga proposta l'occasione.<br> Non esitare a contattarci!",
+      "name": "Nome",
+      "name_placeholder": "Inserisci il tuo nome",
+      "surname": "Cognome",
+      "surname_placeholder": "Inserisci il tuo cognome",
+      "email": "Email",
+      "email_placeholder": "Inserisci la tua email",
+      "email_sub": "La mail ci serve per ricordarti dell'evento e segnalarti se ci sono problemi!",
+      "phone": "Telefono",
+      "phone_placeholder": "Inserisci il tuo numero di telefono",
+      "checkbox": "Acconsento al trattamento dei dati personali e dichiaro di avere almeno di 16 anni",
+      "submit": "Avanti"
+    }
   }
 }
