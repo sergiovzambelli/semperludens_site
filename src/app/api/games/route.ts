@@ -15,6 +15,9 @@ export async function GET(request: NextRequest) {
 
     const games = await prisma.game.findMany({
       where: { eventId: event_id },
+      include: {
+        reservations: true,
+      }
     });
 
     return NextResponse.json(games, { status: 200 });
@@ -40,6 +43,6 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(game, { status: 201 });
 
   } catch (error) {
-    return NextResponse.json({ message: 'An error occurred' }, { status: 500 });
+    return NextResponse.json({ message: 'An error occurred: ' + error }, { status: 500 });
   } 
 }

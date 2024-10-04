@@ -17,6 +17,7 @@ export default function BoxGame({ game }: BoxGameProps) {
     : game.player_max;
   const isAvaible = reservations > 0;
   const [isOpen, setIsOpen] = useState(false);
+  console.log("game", game);
 
   useEffect(() => {
     if (isOpen) {

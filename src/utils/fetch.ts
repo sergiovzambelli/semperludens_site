@@ -104,6 +104,18 @@ export async function createPlayer(player: Player) {
 
 // RESERVATIONS API
 
-export async function createReservation() {
-  return;
+export async function createReservation(player_id : string, game_id : string) {
+  try {
+    const response = await fetch(`/api/players/${player_id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ game_id }),
+    });
+    return await response.json();
+  } catch (error) {
+    console.error("Error while calling the API", error);
+    return {};
+  }
 }

@@ -1,5 +1,7 @@
 "use client";
+import SaveReservation from "@/components/Checkout/SaveReservation";
 import { RootState } from "@/lib/store";
+import { Player } from "@/utils/interfaces";
 import { useSelector } from "react-redux";
 
  
@@ -13,6 +15,15 @@ export default function CheckoutPage() {
   const email = useSelector((state: RootState) => state.player.email);
   const phone = useSelector((state: RootState) => state.player.phone);
 
+  const player : Player = {
+    name: name,
+    surname: surname,
+    email: email,
+    phone: phone,
+    id: "",
+    reservations: [],
+  }
+
   return (
     <main className="min-h-dvh bg-red-50">
       <div>
@@ -23,6 +34,7 @@ export default function CheckoutPage() {
         <p>Surname: {surname}</p>
         <p>Email: {email}</p>
         <p>Phone: {phone}</p>
+        <SaveReservation player={player} game_id={game_id}/>
       </div>
     </main>
   );
