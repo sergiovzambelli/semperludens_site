@@ -10,6 +10,14 @@ export type FormData = {
   checkbox: boolean
 }
 
+export type ReservationData = {
+  event_name: string,
+  game_name: string,
+  time: string,
+  date: string,
+  email: string,
+}
+
 export type PlayerFormData = {
   name: string
   surname: string

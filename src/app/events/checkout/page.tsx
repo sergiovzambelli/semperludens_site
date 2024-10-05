@@ -1,7 +1,9 @@
 "use client";
 import SaveReservation from "@/components/Checkout/SaveReservation";
 import { RootState } from "@/lib/store";
-import { Player } from "@/utils/interfaces";
+import { getSingleEvent } from "@/utils/fetch";
+import { Game, Player, Event } from "@/utils/interfaces";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
  
@@ -15,6 +17,20 @@ export default function CheckoutPage() {
   const email = useSelector((state: RootState) => state.player.email);
   const phone = useSelector((state: RootState) => state.player.phone);
 
+  const [event, setEvent] = useState<Event | null>(null);
+  const [game, setGame] = useState<Game | null>(null);
+
+  useEffect(() => {
+    const fetchEvent = async () => {
+      const event = await getSingleEvent(event_id);
+      setEvent(event);
+      const game = event.games.find((game:Game) => game.id === game_id);
+      setGame(game);
+    };
+  
+    fetchEvent();
+  }, []);
+
   const player : Player = {
     name: name,
     surname: surname,
@@ -22,6 +38,14 @@ export default function CheckoutPage() {
     phone: phone,
     id: "",
     reservations: [],
+  }
+
+  const data = {
+    event_name: event?.title || "",
+    game_name: game?.title || "",
+    time: event?.start_time || "",
+    date: event?.start_date || "",
+    email: email,
   }
 
   return (
@@ -34,7 +58,7 @@ export default function CheckoutPage() {
         <p>Surname: {surname}</p>
         <p>Email: {email}</p>
         <p>Phone: {phone}</p>
-        <SaveReservation player={player} game_id={game_id}/>
+        <SaveReservation player={player} game_id={game_id} data={data}/>
       </div>
     </main>
   );
