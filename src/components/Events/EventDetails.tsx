@@ -43,9 +43,9 @@ export default function EventDetails({event_id} : EventDetailsProps) {
         event
         ?
         <div className="flex flex-col gap-12">
-          <Text text={event.title} type="xl" className="text-yellow"/>
+          <Text text={event.title} type="xl" className="text-yellow !text-7xl"/>
 
-          <div className="flex flex-col gap-0 items-center">
+          <div className="flex flex-col gap-2 items-center">
             <Text text={event_text.when + event.start_date} type="m" className="text-white"/>
             <Text text={event_text.time + event.start_date} type="m" className="text-white"/>
             <Text text={event_text.where + event.start_date} type="m" className="text-white"/>

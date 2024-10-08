@@ -30,7 +30,7 @@ export default function ShowEvents() {
   }, []);
   
   return (
-    <div className="flex flex-col gap-16">
+    <div className="flex flex-col gap-12">
       <Text text={events_page.selection} type="l" className="text-white text-center !font-bold"/>
 
       {

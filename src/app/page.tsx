@@ -47,7 +47,7 @@ export default function Home() {
 
         <div className="flex flex-col lg:flex-row gap-4 items-center justify-center">
           <Button text={home_page.first_section.contact_button} url="#form" icon="full_arrow"/>
-          {/* <Button text={home_page.first_section.event_button} icon="calendar"/> */}
+          {/* <Button text={home_page.first_section.event_button} url="/events" icon="calendar"/> */}
         </div>
       </div>
 

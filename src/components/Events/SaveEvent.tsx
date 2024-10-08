@@ -2,13 +2,14 @@
 
 import { useDispatch } from "react-redux";
 import { setEventId } from "@/lib/features/event/eventSlice";
-import Button from "../Button";
+import Link from "next/link";
+import Text from "@/components/Text";
 
 interface SaveEventProps {
   event_id: string;
 }
 
-export default function SaveEvent({ event_id } : SaveEventProps) {
+export default function SaveEvent({ event_id }: SaveEventProps) {
   const dispatch = useDispatch();
 
   function saveEvent() {
@@ -16,11 +17,8 @@ export default function SaveEvent({ event_id } : SaveEventProps) {
   }
 
   return (
-    <Button
-      text="Iscrivimi!"
-      icon="empty_arrow"
-      url={"/events/games"}
-      onClick={saveEvent}
-    />
+    <Link href={`/events/games`} className="bg-white text-red-50 p-5 rounded-full" onClick={saveEvent}>
+      <Text text="Iscrivimi!" type="m" className="!font-medium" />
+    </Link>
   );
 }

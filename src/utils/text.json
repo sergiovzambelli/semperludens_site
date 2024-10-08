@@ -54,9 +54,9 @@
     "no_events": "Non ci sono eventi in programma al momento. <br>Torna a trovarci più tardi!"
   },
   "event" : {
-    "when": "Quando: ",
-    "where": "Dove: ",
-    "time": "A che ora: ",
+    "when": "<span style='font-weight: bold; font-size: 34px;'>Quando: </span>",
+    "where": "<span style='font-weight: bold; font-size: 34px;'>Dove: </span>",
+    "time": "<span style='font-weight: bold; font-size: 34px;'>A che ora: </span>",
     "min_age": "Età minima: 16 anni"
   },
   "games" : {
