@@ -5,7 +5,7 @@ import { Game } from "@/utils/interfaces";
 import { useEffect, useState } from "react";
 import ModalGame from "./ModalGame";
 import AvaibleChips from "./AvaibleChips";
-import Button from "../Button";
+import Link from "next/link";
 
 interface BoxGameProps {
   game: Game;
@@ -17,7 +17,6 @@ export default function BoxGame({ game }: BoxGameProps) {
     : game.player_max;
   const isAvaible = reservations > 0;
   const [isOpen, setIsOpen] = useState(false);
-  console.log("game", game);
 
   useEffect(() => {
     if (isOpen) {
@@ -33,7 +32,7 @@ export default function BoxGame({ game }: BoxGameProps) {
 
   return (
     <section
-      className={`bg-white px-6 py-10 lg:p-8 flex flex-col justify-center items-center rounded-xl gap-10 ${
+      className={`bg-white px-6 py-10 lg:p-12 flex flex-col justify-center items-center rounded-xl gap-10 w-full lg:w-[600px] ${
         isOpen ? "" : "cursor-pointer"
       }`}
       onClick={() => !isOpen && setIsOpen(true)}
@@ -48,23 +47,26 @@ export default function BoxGame({ game }: BoxGameProps) {
         />
 
         <div className="flex flex-col gap-2 lp:gap-4">
-
-        <Text
-          text={`Master: ${game.master_name}`}
-          type="l"
-          className="text-blue-50 text-center"
-        />
-        <Text
-          text={`${game.game}`}
-          type="l"
-          className="text-blue-50 text-center"
-        />
+          <Text
+            text={`${game.game}`}
+            type="l"
+            className="text-blue-50 text-center !font-bold !text-3xl"
+          />
+          <Text
+            text={`<span style='font-weight: bold;'>Master: </span>${game.master_name}`}
+            type="m"
+            className="text-blue-50 text-center"
+          />
         </div>
       </div>
 
       <AvaibleChips isAvaible={isAvaible} n={reservations} />
 
-      {isAvaible && <Button text="Scopri di più" url="#" icon="full_arrow" />}
+      {isAvaible && (
+        <button className="bg-blue-50 text-white px-10 py-4 rounded-full">
+          <Text text="Scopri di più" type="m" className="!font-medium text-center" />
+        </button>
+      )}
     </section>
   );
 }

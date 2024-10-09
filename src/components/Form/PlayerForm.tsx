@@ -10,6 +10,7 @@ import Text from "../Text";
 import { useDispatch } from "react-redux";
 import { setPlayerData } from "@/lib/features/player/playerSlice";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 interface FormProps {
   classname?: string;
@@ -44,9 +45,9 @@ export default function PlayerForm({ classname }: FormProps) {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className={`flex flex-col gap-8 w-full ${classname}`}
+      className={`flex flex-col gap-12 w-full ${classname}`}
     >
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-4">
         <Input
           placeholder={player_text.form.name_placeholder}
           label={player_text.form.name}
@@ -54,6 +55,8 @@ export default function PlayerForm({ classname }: FormProps) {
           register={register}
           name={"name"}
           error={errors.name}
+          className="!text-2xl"
+          classNameLabel="!text-2xl"
         />
         <Input
           placeholder={player_text.form.surname_placeholder}
@@ -62,6 +65,8 @@ export default function PlayerForm({ classname }: FormProps) {
           register={register}
           name={"surname"}
           error={errors.surname}
+          className="!text-2xl"
+          classNameLabel="!text-2xl"
         />
         <Input
           placeholder={player_text.form.phone_placeholder}
@@ -70,6 +75,8 @@ export default function PlayerForm({ classname }: FormProps) {
           register={register}
           name={"phone"}
           error={errors.phone}
+          className="!text-2xl"
+          classNameLabel="!text-2xl"
         />
       </div>
 
@@ -81,10 +88,12 @@ export default function PlayerForm({ classname }: FormProps) {
           register={register}
           name={"email"}
           error={errors.email}
+          className="!text-2xl"
+          classNameLabel="!text-2xl"
         />
         <Text
           text={player_text.form.email_sub}
-          type="xs"
+          type="s"
           className="text-grey text-center max-w-[400px]"
         />
       </div>
@@ -94,14 +103,31 @@ export default function PlayerForm({ classname }: FormProps) {
         register={register}
         name={"checkbox"}
         error={errors.checkbox}
+        classNameCheckbox="!min-h-10 !min-w-10"
+        classNameText="!text-lg"
       />
-      <div className="mt-8 flex justify-between lg:justify-center w-full gap-16">
-        {/* <Button text="" icon="empty_arrow" url="/events/games"/> */}
-        <Button
-          text={player_text.form.submit}
-          icon="empty_arrow"
+      <Text
+        text={player_text.form.mandatory}
+        type="m"
+        className="text-grey  text-center"
+      />
+      <div className="mt-8 flex flex-row justify-between  lg:justify-between w-full gap-16 ">
+        <Link
+          href={`/events/games`}
+          className="bg-white text-blue-60 p-5 rounded-full"
+        >
+          <Text text="Indietro" type="m" className="!font-medium" />
+        </Link>
+        <button
           type="submit"
-        />
+          className="bg-white text-blue-60 p-5 rounded-full"
+        >
+          <Text
+            text={player_text.form.submit}
+            type="m"
+            className="!font-medium"
+          />
+        </button>
       </div>
     </form>
   );

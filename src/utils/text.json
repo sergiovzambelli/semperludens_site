@@ -78,6 +78,7 @@
       "phone": "Telefono",
       "phone_placeholder": "Inserisci il tuo numero di telefono",
       "checkbox": "Acconsento al trattamento dei dati personali e dichiaro di avere almeno di 16 anni",
+      "mandatory": "*i campi sono obbligatori",
       "submit": "Avanti"
     }
   }

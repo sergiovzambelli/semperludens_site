@@ -13,9 +13,9 @@ export default function AvaibleChips({ isAvaible, n }: AvaibleChipsProps) {
       }`}
     >
       <Text
-        text={isAvaible ? `Posti rimasti: ${n}` : `Sold out`}
+        text={isAvaible ? `Posti rimasti: <span style='font-weight: bold;'>${n}</span>` : `<span style='font-weight: bold;'>Sold out</span>`}
         type="m"
-        className="text-center !font-light"
+        className="text-center !font-medium !text-blue-50"
       />
     </div>
   );
