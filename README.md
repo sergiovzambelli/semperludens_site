@@ -1,4 +1,4 @@
-# semperludens_website
+# Semperludens website
 New Semper Ludens Website - July 2024 Version
 
 ## Overview
